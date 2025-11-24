@@ -1,3 +1,8 @@
+# student database management system 
+#I have made project on the topic student database management system in which you can add the details of students
+#Their roll number, name ,class ,subject , each subject marks and can access it anytime 
+# you can update the records, delete the records, search the records . also you can find different statistical data using it like average of class , etc.. 
+#Also i have tried to create project using gui
 import csv
 import os
 import statistics
