@@ -1,10 +1,4 @@
-
-"""
-Student Management System (CLI)
-Features: add/view/search/update/delete, stats, CSV persistence
-Author: Harsh Jain (suggested)
-"""
-
+#Student Database management
 import csv
 import os
 import statistics
