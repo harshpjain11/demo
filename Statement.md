@@ -1,77 +1,47 @@
-1. Problem Statement
 
-Managing student information such as personal details, subject-wise marks, grades, and overall performance becomes difficult when handled manually or through unorganized files. Teachers and administrators often face challenges like data duplication, difficulty in searching records, lack of automated grading, and inefficiency in maintaining updated student reports.
-A digital student management system is needed to store, update, search, and analyze student data in an easy and error-free way.
+## 5.2 statement.md
 
+### Problem Statement
 
----
-
-2. Scope of the Project
-
-The Student Management System (GUI version) allows users to perform all essential operations related to maintaining student academic records.
-The scope includes:
-
-Adding new student data (roll number, name, class, marks)
-
-Validating marks and preventing duplicate roll numbers
-
-Automatically calculating percentage and grade
-
-Updating and deleting existing records
-
-Searching students by name or roll number
-
-Displaying all records in a table format
-
-Exporting data to an external CSV file for future use
-
-Persisting data in a local students.csv file for long-term storage
-
-Providing a simple and interactive graphical interface using Tkinter
-
-
+The manual process of **managing student records**—including collecting marks, calculating percentages and grades, and generating class statistics—is often **time-consuming**, **error-prone**, and **inefficient** when handled using traditional methods like spreadsheets or paper registers. A reliable, automated system is needed to centralize student data management, improve data accuracy, and provide quick access to student performance metrics.
 
 ---
 
-3. Target Users
+### Scope of the Project
 
-This system is designed for:
+The project is to develop a **Command-Line Interface (CLI) Student Management System** in Python. This system will manage student records, including personal details and academic marks for a predefined number of subjects.
 
-Teachers / Faculty
-To maintain class-wise student academic information.
-
-School/College Administrators
-For maintaining official student records digitally.
-
-Students (Indirectly)
-To ensure accurate record-keeping of marks and grades.
-
-Institutes with limited resources
-Who need a lightweight, offline, easy-to-use software to organize student data.
-
-
+The system's scope includes:
+* **Persistent Storage:** Storing and retrieving all student data using a **CSV file (`students.csv`)**.
+* **Core CRUD Operations:** Implementing functions to **Create (Add)**, **View**, **Update**, and **Delete** student records.
+* **Search Functionality:** Allowing students to be located by roll number or name.
+* **Automated Calculations:** Automatically computing **percentage** and **grade** based on subject marks.
+* **Statistical Reporting:** Providing a summary of **class statistics** (e.g., average, median, pass percentage).
+* **Data Export:** Allowing the user to export the current data to a separate CSV file.
 
 ---
 
-4. High-Level Features
+### Target Users
 
-Graphical User Interface (Tkinter)
-Easy-to-use interface for performing all actions without technical knowledge.
+The primary target users for this CLI system are individuals and small-scale educational entities that require a simple, text-based solution for student data management.
 
-CRUD Operations
-Add, Update, Delete student data easily.
+* **Individual Educators/Tutors:** For managing records of a single class or a small group of students.
+* **Small School Administrators:** For basic, decentralized record-keeping without the need for a complex, graphical interface.
+* **Programming Students/Developers:** As a reusable utility or a foundation for learning data structures, file handling (CSV), and CLI application development in Python.
 
-Automated Calculations
-Computes total percentage and assigns grade based on predefined criteria.
+---
 
-Search Functionality
-Real-time search by name or roll number.
+###  High-Level Features
 
-CSV Export
-Allows exporting complete student records for backup or reporting.
+The Student Management System will provide the following main features:
 
-Local Data Persistence
-Uses students.csv for storing and loading data automatically.
-
-Validation Handling
-Ensures marks are within valid range and roll numbers are not duplicated.
+| Feature | Description | Implementation Details |
+| :--- | :--- | :--- |
+| **Add Student** | Allows the user to input a new student's details and marks. | Handles unique roll number validation; computes percentage and grade automatically. |
+| **View Students** | Displays all student records in an organized, paginated list. | Sorts by roll number; includes roll number, name, class, percentage, and grade. |
+| **Search Student** | Finds and displays detailed records for a student. | Searches by roll number or partial/full name match. |
+| **Update Student** | Modifies an existing student's name, class, or marks. | Recalculates percentage and grade after any mark update. |
+| **Delete Student** | Permanently removes a student record from the system. | Requires confirmation to prevent accidental deletion. |
+| **Class Statistics** | Provides an overview of the class's academic performance. | Calculates average, median, highest, lowest percentage, and pass percentage (based on a 50% pass mark). |
+| **CSV Persistence** | Ensures data is saved and loaded between application sessions. | Uses a **`students.csv`** file for read/write operations. |
+| **Export CSV** | Creates a copy of the current student data to a user-specified file. | Allows generation of reports or backups. |
